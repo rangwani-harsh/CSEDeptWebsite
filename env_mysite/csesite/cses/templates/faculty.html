@@ -1,0 +1,50 @@
+
+ {% extends "base.html" %}
+{% block title %}
+Faculty
+{% endblock %}
+
+{% block content %}
+
+	  
+
+      <div class="col s12 m12 l8"> <!-- Note that "m8 l9" was added -->
+        <!-- Teal page content
+
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+		  
+			{% for x in list %}	
+			<div class="card horizontal card-horizontal">
+			  <div class="card-image">
+				<img src="{{ x.image }}">
+			  </div>
+			  <div class="card-stacked">
+				<div class="card-content">
+				  <h4>{{ x.name }}</h4>
+				  <h5>{{ x.desig }}</h5>
+				  <p>{{ x.address }}<br/>
+				  Email: {{ x.email }}<br/>
+				  Phone{{ x.phone }}</p>
+				</div>
+				<div class="card-action">
+				  <a href="{{ x.link }}">Click Here To view his page</a>
+				</div>
+			  </div>
+			</div>
+			
+			{% endfor %}
+			 
+			
+		
+            
+      </div>
+		</div>
+		</div>
+		{% endblock %}
+    
+      
+        
+        

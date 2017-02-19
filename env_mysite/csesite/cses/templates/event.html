@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}
+Events
+{% endblock %}
+
+{% block content %}
+
+      <div class="col s12 m6 l6"> 
+      {% for x in list %}
+	    <div class="card">
+		<div class="card-image waves-effect waves-block waves-light">
+		<img class="activator" src="{{ x.image }}">
+		</div>
+		<div class="card-content">
+		<span class="card-title activator grey-text text-darken-4"><h3>{{ x.title }}</h3><i class="material-icons right">more_vert</i></span>
+		<p><a href="#codefest">View More Info</a></p>
+		</div>
+		<div class="card-reveal">
+		<span class="card-title grey-text text-darken-4">Event Details<i class="material-icons right">close</i></span>
+		<p>{{ x.desc }}</p>
+	    <ul class ="center" ><h4>EVENTS</h4>
+	    {% for key in x.sub %}
+			<li><a href="#">{{ key }}</a></li>
+		{% endfor %}
+		</ul>
+		</div>
+
+	</div>
+	{% endfor %}
+	
+	     <div class="card">
+		<div class="card-image waves-effect waves-block waves-light">
+		<img class="activator" src="./image/event1.jpg">
+		</div>
+		<div class="card-content">
+		<span class="card-title activator grey-text text-darken-4"><h3>TECH TALKS</h3><i class="material-icons right">more_vert</i></span>
+		<p><a href="#codefest">This is a link</a></p>
+		</div>
+		<div class="card-reveal">
+		<span class="card-title grey-text text-darken-4">Event Details<i class="material-icons right">close</i></span>
+		<p>Codefest is the annual coding festival hosted by the Department of Computer Science and Engineering ,
+		IIT (BHU) Varanasi, which is completely online so you can participate in the fest in the comfort of your home.
+        The total prizes for all events are worth INR 4,50,000. You can register for it at www.codefest.tech . It's completely free!</p>
+	    <ul class ="center" ><h4>EVENTS</h4>
+		<li><a href="#">MANTHAN</a></li>
+		<li><a href="#">HACKATHON</a></li>
+		<li><a href="#">CAPTURE THE FLAG</a></li>
+		<li><a href="#"><a>DECIPHER</a></li>
+		</ul>
+		</div>
+	</div>
+		
+      </div>
+      </div>
+      </div>
+
+    </div>
+		
+     {% endblock %}

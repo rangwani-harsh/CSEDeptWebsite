@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title%}
+Contact Us
+{% endblock %}
+
+{% block content %}
+      <div class="col s12 m8 l8"> <!-- Note that "m8 l9" was added -->
+        <!-- Teal page content
+
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+		<div class="card">
+       <div class="card-content">
+       <span class="card-title activator grey-text text-darken-4"><div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card-panel teal">
+          <span class="white-text"><b><h3>Contact Us:</h3></b>
+          </span>
+        </div>
+      </div>
+    </div></span>
+	   
+	   <div class="float-text"><span>
+		 <h5>
+		 <b>
+		 Banaras Hindu University Campus, <br>Varanasi, <br>Uttar Pradesh 221005<br>
+		 Phone No.-0542 230 7306
+		 
+		 </b>
+		 
+		 </h5>
+             <br><br><br><br><br><br>
+			</span></div>
+      </div>
+      
+	    {% if form.errors %}
+	        <p style="color: red;">
+	            Please correct the error{{ form.errors|pluralize }} below.
+	        </p>
+	    {% endif %}
+
+	    <form action="" method="post">
+	        <table>
+	            {{ form.as_table }}
+	        </table>
+	        {% csrf_token %}
+	        <input type="submit" value="Submit" >
+	        <br/>
+	        <br/>
+	    </form></div>
+      </div>
+	  <div class="col s12 m4 l2"> <!-- Note that "m8 l9" was added -->
+		<h5 class="center"><b>LATEST NEWS</b></h5><ul>
+        <div class="card-panel teal">
+          <span class="white-text"><li>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.</li>
+          </span>
+		  <div class="divider"></div>
+		  <span class="white-text"><li>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.</li>
+          </span>
+		  <div class="divider"></div>
+		  <span class="white-text"><li>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.</li>
+          </span>
+		  
+        </div></ul>
+		
+		<h5 class="center"><b>Ongoing Project</b></h5><ul>
+        <div class="card-panel teal">
+          <span class="white-text"><li>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.</li>
+          </span>
+		  <div class="divider"></div>
+		  <span class="white-text"><li>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.</li>
+          </span>		  
+        </div></ul>
+		
+		
+      </div>
+
+    </div>
+    {% endblock %}  
+        
+      

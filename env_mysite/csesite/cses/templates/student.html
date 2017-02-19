@@ -1,0 +1,387 @@
+{% extends "base.html" %}
+{% block title %}
+Students
+{% endblock %}
+
+{% block content %}
+<div class="col s12 m9 l9">
+    <div class="section right-align">
+     <form action="/student/" method="POST">
+     {% csrf_token %}
+     <strong class="left-align">Search</strong>
+      <input  type="text" name="query">
+      
+      <input class="with-gap" name="type" type="radio" id="test56" value="name"/>
+      <label for="test56">Name</label>
+      
+
+      <input class="with-gap" name="type" type="radio" id="test65" value="roll"/>
+      <label for="test65">Roll No.</label>
+      
+      <input type="submit" value="Search">
+     </form>
+    </div>
+    <div class="divider"></div>
+		<div style=" height:3em; margin:0px;border:0px;color: #0089ec;">
+	   <h3 class="center"><b>Yearwise Student List</b></h3>
+	   </div>
+	  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#test1">Btech</a></li>
+        <li class="tab col s3"><a class="active" href="#test2">IDD</a></li>
+        <li class="tab col s3"><a href="#test3">Phd</a></li>
+
+      </ul>
+    </div>
+    <div id="test1" class="col s12"><ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 1</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in btech %}
+              {% if x.part == 1 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+
+        </tbody>
+      </table></div></li></ul>
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 2</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in btech %}
+              {% if x.part == 2 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+
+        </tbody>
+      </table></div></li></ul>
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 3</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+          <tbody>
+         {% for x in btech %}
+              {% if x.part == 3 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+      </table></div></li></ul>
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 4</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+           {% for x in btech %}
+              {% if x.part == 4 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+           {% endfor %}
+        </tbody>
+
+      </table></div></li></ul></div>
+    <div id="test2" class="col s12"><ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 1</div>
+      <div class="collapsible-body"><table class="responsive-table">
+
+      <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+      </thead>
+        <tbody>
+           {% for x in idd %}
+              {% if x.part == 1 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+      </table></div></li></ul>
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 2</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in idd %}
+              {% if x.part == 2 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+
+      </table></div></li></ul>
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 3</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in idd %}
+              {% if x.part == 3 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+
+      </table></div></li></ul>
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 4</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in idd %}
+              {% if x.part == 4 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+
+      </table></div></li></ul>
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part 5</div>
+      <div class="collapsible-body"><table class="responsive-table">
+
+       <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+			   <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in idd %}
+              {% if x.part == 5 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+			        <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+
+      </table></div></li></ul></div>
+    <div id="test3" class="col s12"><ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part-I</div>
+      <div class="collapsible-body"><table class="responsive-table">
+       <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+         <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in phd %}
+              {% if x.part == 1 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+              <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+      </table></div></li></ul>
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part-II</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+         <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in phd %}
+              {% if x.part == 2 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+              <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+      </table></div></li></ul>
+       <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part-III</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+         <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in phd %}
+              {% if x.part == 3 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+              <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+      </table></div></li></ul>
+       <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part-IV</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+         <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in phd %}
+              {% if x.part == 4 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+              <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+      </table></div></li></ul>
+       <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Part-V</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="name">Roll No</th>
+              <th data-field="price">Name of student</th>
+         <th data-field="price">Email Id</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in phd %}
+              {% if x.part == 5 %}
+                <tr>
+                    <td>{{ x.roll }}</td>
+                    <td>{{ x.name }}</td>
+              <td>{{ x.email }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+        </tbody>
+      </table></div></li></ul>
+
+
+      </div>
+  </div>
+  </div>
+  </div>
+ {% endblock %}

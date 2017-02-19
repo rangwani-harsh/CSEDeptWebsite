@@ -1,0 +1,802 @@
+
+{% extends "base.html" %}
+{% block title%}
+Course
+{% endblock %}
+
+{% block content %}
+      
+
+
+      <div class="col s12 m8 l8"> <!-- Note that "m8 l9" was added -->
+        <!-- Teal page content
+          
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+		  <h5>SEMESTER-WISE COURSE STRUCTURE OF</br></h5>
+           <h6>4-YR B.Tech.+5-YR DUAL DEGRRE  (Computer Science and Engineering) PROGRAMM</h6>
+		 
+
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-I</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for x in subject %}
+              {% if x.sem == 1 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+
+          <tr>
+            <td>IS.PHY 101.14</td>
+            <td>PHY 101</td>
+            <td>Physics I</td>
+			<td>3-1-2</td>
+			<td>13</td>
+          </tr>
+          <tr>
+            <td>IS.MA 101.14</td>
+            <td>MA 101</td>
+            <td>Engineering Maths- I</td>
+			<td>3-1-0</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>IE.CSO 101.14</td>
+            <td>CSO 101</td>
+            <td>Computer Programming</td>
+			<td>3-1-2</td>
+			<td>13</td>
+          </tr>
+		  <tr>
+            <td>EP.ME 106.14</td>
+            <td>ME 106</td>
+            <td>Manufacturing Practice-II</td>
+			<td>0-0-3</td>
+			<td>03</td>
+          </tr>
+		  <tr>
+            <td>EP.ME 104.14</td>
+            <td>ME 104</td>
+            <td>Engineering Drawing</td>
+			<td>1-0-3</td>
+			<td>06</td>
+          </tr>
+		  <tr>
+            <td>IH.H 101.14</td>
+            <td>H 101</td>
+            <td>Universal Human Values - I: Self and Family</td>
+			<td>1-2-0</td>
+			<td>05</td>
+          </tr>
+		  <tr>
+            <td>LM.HL101.14</td>
+            <td>HL 101</td>
+            <td>Basic English</td>
+			<td>2-0-1</td>
+			<td>07</td>
+          </tr>
+		   <tr>
+            <td>LM.HL101.14</td>
+            <td>HL 101</td>
+            <td>Basic English</td>
+			<td>2-0-1</td>
+			<td>07</td>
+          </tr>
+		   <tr>
+            <td></td>
+            <td></td>
+            <td> Total</td>
+			<td>15-6-8</td>
+			<td>63</td>
+          </tr>
+        </tbody>
+      </table></div></li></ul>
+
+		 
+	  <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-II</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in subject %}
+              {% if x.sem == 2 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>IE.EO 101.14</td>
+            <td>EO 101</td>
+            <td>Fundamentals of Electrical Engineering</td>
+			<td>3-1-2</td>
+			<td>13</td>
+          </tr>
+          <tr>
+            <td>MC.CSO 102.15</td>
+            <td>CSO 102</td>
+            <td>Data Structures *</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>DC.CSE 101.14</td>
+            <td>CSE 101</td>
+            <td>Information Technology Workshop-I (ITW-1)</td>
+			<td>2-0-3</td>
+			<td>09</td>
+          </tr>
+		  <tr>
+            <td>EP.ME 105.14</td>
+            <td>ME 105</td>
+            <td>Manufacturing Practice-I</td>
+			<td>0-0-3</td>
+			<td>03</td>
+          </tr>
+		  <tr>
+            <td>IH.H 105.14
+IH.H 106.14</td>
+            <td>H 105/H 106</td>
+            <td> (Philosophy /Education & Self) #</td>
+			<td>2-1-0</td>
+			<td>08</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+			<td>13-3-10</td>
+			<td>55</td>
+          </tr>
+		 
+        </tbody>
+      </table></li></ul>
+	    <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-III</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+         {% for x in subject %}
+              {% if x.sem == 3 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>IE.CMO 101.14</td>
+            <td>CMO101</td>
+            <td>Engineering Mechanics</td>
+			<td>3-1-0</td>
+			<td>11</td>
+          </tr>
+          <tr>
+            <td>MC.CSO201.15</td>
+            <td>CSO201</td>
+            <td>Discrete Maths +</td>
+			<td>3-0-0</td>
+			<td>09</td>
+          </tr>
+		  <tr>
+            <td>MC.CSO202.15</td>
+            <td>CSO202</td>
+            <td>Computer  System Organization *</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>DC.CSE201.15</td>
+            <td>CSE201</td>
+            <td>Information Technology Workshop-II (ITW-II)</td>
+			<td>2-0-3</td>
+			<td>09</td>
+          </tr>
+		  <tr>
+            <td>IH3.(H103/H104)/ (H105/H106).14</td>
+            <td>H103/H104/ H105/H106</td>
+            <td>(History & Civilization / Development of Societies )
+ / (Philosophy /Education & Self)</td>
+			<td>2-1-0</td>
+			<td>08</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+			<td>16-2-7</td>
+			<td>59</td>
+          </tr>
+		  </tbody>
+      </table></li></ul>
+	       <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-IV</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in subject %}
+              {% if x.sem == 4 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>DC.CSE 202.15</td>
+            <td>CSE 202</td>
+            <td>Artificial Intelligence</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+          <tr>
+            <td>MC.CSO 203.15</td>
+            <td>CSO203</td>
+            <td>Algorithms *</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>MC.CSO 204.14</td>
+            <td>CSO204</td>
+            <td>Operating Systems</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE291.15</td>
+            <td>CSE 291</td>
+            <td>Exploratory Project</td>
+			<td>0-0-5</td>
+			<td>05</td>
+          </tr>
+		  <tr>
+            <td>IH.HL201.14</td>
+            <td>HL 201</td>
+            <td>Universal Human Values - II: Self, Society and Family</td>
+			<td>1-2-0</td>
+			<td>05</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+			<td>13-3-11</td>
+			<td>54</td>
+          </tr>
+		  </tbody>
+      </table></li></ul>
+		      <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-V</div>
+      <div class="collapsible-body"><table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in subject %}
+              {% if x.sem == 5 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>OE</td>
+            <td></td>
+            <td>Open Elective-1</td>
+			<td>3-0-1</td>
+			<td>9/11</td>
+          </tr>
+          <tr>
+            <td>DC.CSE301.16</td>
+            <td>CSE301</td>
+            <td>Database Management System</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>MC.CSO301.16</td>
+            <td>CSO301</td>
+            <td>Computer Graphics*</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>BE.CSE311.16/
+BE.CSE321.16/
+BE.CSE411.16</td>
+            <td>CSE311/
+CSE321/
+CSE411</td>
+            <td>Stream Elective-I/</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>LM1.HL301.16</td>
+            <td>HL301</td>
+            <td>Professional Communication</td>
+			<td>2-1-0</td>
+			<td>08</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE391.16</td>
+            <td>CSE391</td>
+            <td>Stream Project (Hons.)##</td>
+			<td>0-0-10</td>
+			<td>10</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total Credits </td>
+			<td>17-2-16</td>
+			<td>73</td>
+          </tr>
+        </tbody>
+      </table></li></ul>
+	      <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-VI</div>
+      <div class="collapsible-body"> <table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+         {% for x in subject %}
+              {% if x.sem == 6 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>DC.CSE304.16</td>
+            <td>CSE304</td>
+            <td>Software Engineering</td>
+			<td>3-0-0</td>
+			<td>09</td>
+          </tr>
+          <tr>
+            <td>MC.CSO302.16</td>
+            <td>CSO302</td>
+            <td>Theory of Computation+-</td>
+			<td>3-0-0</td>
+			<td>09</td>
+          </tr>
+		  <tr>
+            <td>DC.CSE305.16</td>
+            <td>CSE305</td>
+            <td>Computer Architecture</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+		  <tr>
+            <td>BE.CSE312.16/
+BE.CSE322.16/</td>
+            <td>CSE312/
+CSE322/</td>
+            <td>Stream Elective-II/</td>
+			<td>3-0-2</td>
+			<td>11/09</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE392.16</td>
+            <td>CSE392</td>
+            <td>Stream or UG Project</td>
+			<td>0-0-5</td>
+			<td>05</td>
+          </tr>
+		  <tr>
+            <td>IH.H301.16</td>
+            <td>H301</td>
+            <td>Humanities Course – New</td>
+			<td>3-0-0</td>
+			<td>09</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total Credits </td>
+			<td>18-0-9/
+18-1-9</td>
+			<td>61-63</td>
+          </tr>
+        </tbody>
+      </table></li></ul>
+	     <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-VII</div>
+      <div class="collapsible-body">  <table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in subject %}
+              {% if x.sem == 7 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>DC.CSE401.17</td>
+            <td>CSE401</td>
+            <td>Compiler Design</td>
+			<td>3-0-0</td>
+			<td>09</td>
+          </tr>
+          <tr>
+            <td>BE.CSE411.16/
+BE.CSE421.17/
+BE.CSE311.16</td>
+            <td>CSE411/
+CSE421/
+CSE311</td>
+            <td>Stream Elective-III/</td>
+			<td>3-0-2</td>
+			<td>11/09</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE491.17</td>
+            <td>CSE491</td>
+            <td>Stream or UG Project#</td>
+			<td>0-0-10</td>
+			<td>10</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE393.17</td>
+            <td>CSE393</td>
+            <td>^Industrial Training/ Summer Project Evaluation</td>
+			<td>0-0-0</td>
+			<td>05</td>
+          </tr>
+		  <tr>
+            <td>LM.HL501.17</td>
+            <td>HL501</td>
+            <td>Academic Writing in Science & Technology</td>
+			<td>2-1-0</td>
+			<td>08</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total Credits in Semester</td>
+			<td>11-1-12</td>
+			<td>50-52</td>
+          </tr>
+        </tbody>
+      </table></li></ul>
+	  </table></li></ul>
+	     <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-VIII</div>
+      <div class="collapsible-body">  <table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in subject %}
+              {% if x.sem == 8 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>DC.CSE402.17</td>
+            <td>CSE402</td>
+            <td>Computer Networks</td>
+			<td>3-0-2</td>
+			<td>11</td>
+          </tr>
+          <tr>
+            <td>BE.CSE412.17/
+BE.CSE422.17</td>
+            <td>CSE412/
+CSE422</td>
+            <td>Stream Elective-IV</td>
+			<td>3-0-2</td>
+			<td>11/09</td>
+          </tr>
+		  <tr>
+            <td>IH6.H401.17</td>
+            <td>H401</td>
+            <td>Humanities</td>
+			<td>3-0-0</td>
+			<td>9</td>
+          </tr>
+		  <tr>
+            <td>DC.CSE403.17</td>
+            <td>CSE403</td>
+            <td>Seminar</td>
+			<td>0-0-3</td>
+			<td>03</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE492.17</td>
+            <td>CSE492</td>
+            <td> Stream Project (Hons.)##</td>
+			<td>0-0-10</td>
+			<td>10</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total Credits in Semester</td>
+			<td>12-0-15/
+12-1-15</td>
+			<td>51/53</td>
+          </tr>
+        </tbody>
+      </table></li></ul>
+      	     <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-IX</div>
+      <div class="collapsible-body">  <table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in subject %}
+              {% if x.sem == 7 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>DC.CSE401.17</td>
+            <td>CSE401</td>
+            <td>Compiler Design</td>
+			<td>3-0-0</td>
+			<td>09</td>
+          </tr>
+          <tr>
+            <td>BE.CSE411.16/
+BE.CSE421.17/
+BE.CSE311.16</td>
+            <td>CSE411/
+CSE421/
+CSE311</td>
+            <td>Stream Elective-III/</td>
+			<td>3-0-2</td>
+			<td>11/09</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE491.17</td>
+            <td>CSE491</td>
+            <td>Stream or UG Project#</td>
+			<td>0-0-10</td>
+			<td>10</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE393.17</td>
+            <td>CSE393</td>
+            <td>^Industrial Training/ Summer Project Evaluation</td>
+			<td>0-0-0</td>
+			<td>05</td>
+          </tr>
+		  <tr>
+            <td>LM.HL501.17</td>
+            <td>HL501</td>
+            <td>Academic Writing in Science & Technology</td>
+			<td>2-1-0</td>
+			<td>08</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total Credits in Semester</td>
+			<td>11-1-12</td>
+			<td>50-52</td>
+          </tr>
+        </tbody>
+      </table></li></ul>
+	  	     <ul class="collapsible" data-collapsible="accordion">
+<li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Semester-X</div>
+      <div class="collapsible-body">  <table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">CS. Coursecode.YY</th>
+              <th data-field="name">Course Code</th>
+              <th data-field="price">Subject</th>
+			   <th data-field="price">Contact Hours</th>
+			    <th data-field="price">Credits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for x in subject %}
+              {% if x.sem == 7 %}
+
+               <tr>
+                    <td>{{ x.cscoursecode }}</td>
+                    <td>{{ x.coursecode }}</td>
+			        <td>{{ x.subject }}</td>
+                    <td>{{ x.contacthours }}</td>
+                    <td>{{ x.credits }}</td>
+                </tr>
+              {% endif %}
+          {% endfor %}
+          <tr>
+            <td>DC.CSE401.17</td>
+            <td>CSE401</td>
+            <td>Compiler Design</td>
+			<td>3-0-0</td>
+			<td>09</td>
+          </tr>
+          <tr>
+            <td>BE.CSE411.16/
+BE.CSE421.17/
+BE.CSE311.16</td>
+            <td>CSE411/
+CSE421/
+CSE311</td>
+            <td>Stream Elective-III/</td>
+			<td>3-0-2</td>
+			<td>11/09</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE491.17</td>
+            <td>CSE491</td>
+            <td>Stream or UG Project#</td>
+			<td>0-0-10</td>
+			<td>10</td>
+          </tr>
+		  <tr>
+            <td>DP.CSE393.17</td>
+            <td>CSE393</td>
+            <td>^Industrial Training/ Summer Project Evaluation</td>
+			<td>0-0-0</td>
+			<td>05</td>
+          </tr>
+		  <tr>
+            <td>LM.HL501.17</td>
+            <td>HL501</td>
+            <td>Academic Writing in Science & Technology</td>
+			<td>2-1-0</td>
+			<td>08</td>
+          </tr>
+		  <tr>
+            <td></td>
+            <td></td>
+            <td>Total Credits in Semester</td>
+			<td>11-1-12</td>
+			<td>50-52</td>
+          </tr>
+        </tbody>
+      </table></li></ul>
+
+      </div>
+
+    </div>
+    {% endblock %}
+      
+     

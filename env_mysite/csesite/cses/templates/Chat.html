@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title%}
+Chat
+{% endblock %}
+{% block content %}
+	<div class="col s12 m8 l8">
+	<h5 class="center-align">Thanks for visiting the site </h5>
+    {% if ip %}
+    <h3 class="center-align">Please enter the following ip to start {{ ip }}</h3>
+    {% endif %}
+{% if form.errors %}
+	
+	        <p style="color: red;">
+	            Please correct the error{{ form.errors|pluralize }} below.
+	        </p>
+	    {% endif %}
+
+	    <form action="" method="post">
+	        <table>
+	            {{ form.as_table }}
+	        </table>
+	        {% csrf_token %}
+	        <input type="submit" value="Submit" >
+	        <br/>
+	        <br/>
+	    </form></div>
+      
+      </div>
+{% endblock %}

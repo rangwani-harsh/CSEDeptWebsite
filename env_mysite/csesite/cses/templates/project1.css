@@ -1,0 +1,43 @@
+  header {
+	  border:2px red solid;
+	 padding:1em;
+	 color:white;
+	 background-color:#7b1fa2;
+	 clear:left;
+	 text-align:center;
+     }
+
+  #left {
+	 
+	  padding:0.5em;
+	  text-align:left;
+	  max-width:400px;
+	  background-color:#eee;
+	  float:left;
+  }
+  #right {
+	  
+	  padding:0.5em;
+	  text-align:left;
+	  max-width:400px;
+	  background-color:#eee;
+	  float:right;
+  }
+  article{
+	  
+	  text-align:center;
+	  font-family:arial;
+	  color:red;
+  }
+  article img
+  {
+	 padding:
+  }
+   footer {
+	  
+	 padding:0.5em;
+	 color:white;
+	 background-color:brown;
+	 clear:left;
+	 text-align:center;
+     }
