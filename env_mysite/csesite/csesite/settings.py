@@ -105,7 +105,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER='harsh.rangwani.cse15@itbhu.ac.in'
-EMAIL_HOST_PASSWORD = '9413690230'
+EMAIL_HOST_PASSWORD = 
 
 
 STATIC_URL = '/static/'
