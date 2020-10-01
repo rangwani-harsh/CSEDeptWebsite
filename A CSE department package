@@ -1,4 +1,4 @@
-## Django CSE dept Website package
+## Django CSE dept Website package is here
 
 A CSE dept. website which is built on Django Backend and uses Materialize CSS framework in frontend. 
 
@@ -12,9 +12,9 @@ A CSE dept. website which is built on Django Backend and uses Materialize CSS fr
 - $ python manage.py runserver 
 - Open up a browser and go to http://127.0.0.1:8000/admin
 - In your browser, open http://127.0.0.1:8000/home to open the home website.
-- Modify the settings.py to change the LOGIN and PASSWORD of web email.
+- Modify the settings .py to change the LOGIN and PASSWORD of web email.
 
-#### Uses:
+#### Uses for u:
 - JQuery
 - Materialize CSS
 - Python3
